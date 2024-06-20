@@ -1,0 +1,80 @@
+/* index.html: */
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 25px;
+
+    text-align: center;
+}
+
+.content h2 {
+    color: #333333;
+    font-size: 30px;
+
+    pointer-events: none;
+}
+
+.content h2 a {
+    color: #333333;
+    transition: .25s ease;
+
+    pointer-events: all;
+}
+
+.content h2 a:hover {
+    color: #FE6E06;
+}
+
+.content a button {
+    color: #fff;
+    background-color: #333333;
+    border: 1px solid #333333;
+
+    font-size: 18px;
+
+    padding: 10px 25px;
+    border-radius: 25px;
+
+    transition: .25s ease;
+
+    cursor: pointer;
+}
+
+.content a button:hover {
+    background: transparent;
+    color: #222f3e;
+    border: 1px solid #222f3e;
+}
+
+.content article {
+    position: absolute;
+    
+    top: -35%;
+    right: 4%;
+
+    display: flex;
+}
+
+.content article div {
+    padding-top: 10px;
+
+    width: 50px;
+    height: 50px;
+}
+
+.content article img {
+    width: 40px;
+    height: 40px;
+}
+
+.content article h2 {
+    font-size: 22px;
+}

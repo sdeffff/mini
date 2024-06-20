@@ -1,10 +1,12 @@
+/* Styles for all of the .html elements: */
+
 *,
 *::after,
 *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 ul {
@@ -21,7 +23,7 @@ img {
 }
 
 body {
-    background-color: #ffda79;
+    background-color: #FAEFE3;
 }
 
 button {

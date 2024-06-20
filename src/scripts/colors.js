@@ -63,6 +63,9 @@ for(let i = 0; i < grid.children.length; i++) {
             overflow.children[0].children[1].style.color = "#2c3e50";
         }
 
+        let eff = new Audio("../../music/success.wav");
+        eff.play();
+
         overflow.style.opacity = 1;
         overflow.style.visibility = "visible";
 

@@ -1,7 +1,7 @@
 /* main.html: */
 
 body {
-    padding: 25px 30px;
+    padding: 100px 30px;
 }
 
 ul {
@@ -64,4 +64,18 @@ ul li a p {
     max-height: 100%;
     object-fit: contain;
     border-radius: 5px;
+}
+
+.online-detector {
+    position: absolute;
+    
+    height: 35px;
+    width: 35px;
+
+    top: 2%;
+    right: 3%;
+
+    border-radius: 50%;
+
+    transition: .2s ease;
 }

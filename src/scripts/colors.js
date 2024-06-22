@@ -8,39 +8,11 @@ const createRandomColor = () => {
 
     let chars = "abcdefABCDEF1234567890";
 
-    for(let j = 0; j < 6; j++) {
+    for(let i = 0; i < 6; i++) {
         col += chars[Math.floor(Math.random() * chars.length)];
     }
 
     return col;
-}
-
-const rbgToHex = (r, g, b) => {
-    const toHex = (component) => {
-        const hex = component.toString(16);
-    
-        return hex.length === 1 ? '0' + hex : hex;
-    }
-
-    return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
-}
-
-const rbgToCols = (string) => {
-    const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-    string = string.split(',');
-
-    for(let i = 0; i < string.length; i++) {
-        string[i] = string[i].split('');
-    
-        string[i] = string[i].filter((el) => {
-            return nums.includes(parseInt(el));
-        })
-    
-        string[i] = string[i].join('');
-    }
-
-    return string;
 }
 
 for(let i = 0; i < grid.children.length; i++) {
@@ -50,8 +22,6 @@ for(let i = 0; i < grid.children.length; i++) {
 
     grid.children[i].addEventListener("click", () => {
         navigator.clipboard.writeText(currCol);
-
-        console.log(date.getHours());
 
         if(date.getHours() >= 18) {
             overflow.style.background = "#2c3e50";
@@ -64,6 +34,8 @@ for(let i = 0; i < grid.children.length; i++) {
         }
 
         let eff = new Audio("../../music/success.wav");
+        eff.volume = 0.8;
+
         eff.play();
 
         overflow.style.opacity = 1;

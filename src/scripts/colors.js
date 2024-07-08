@@ -34,7 +34,7 @@ for(let i = 0; i < grid.children.length; i++) {
         }
 
         let eff = new Audio("../../music/success.wav");
-        eff.volume = 0.8;
+        eff.volume = 0.45;
 
         eff.play();
 

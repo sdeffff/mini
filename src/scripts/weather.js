@@ -24,6 +24,25 @@ navigator.geolocation.getCurrentPosition((position) => {
   .then(response => {
     console.log(response);
 
+    async function getCityName(la, lo) {
+      const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${la}&lon=${lo}`;
+      
+      try {
+        const response = await fetch(url);
+        if(!response.ok) {
+          throw new Error("HTTP error");
+        }
+  
+        const data = await response.json();
+        return data.address.city || data.address.town || data.address.village || "City not found";
+      } catch (error) {
+        console.error(error);
+        return 'Error occured';
+      }
+    }
+
+    getCityName(long, lat).then(res => city.innerHTML = res);
+
     switch(response.data.values.weatherCode) {
       case 1000: {
         weatherIcon.src = "../../images/weather-icons/clear_day.svg";
@@ -86,7 +105,7 @@ navigator.geolocation.getCurrentPosition((position) => {
       }
 
       case 4201: {
-        weatherIcon.src = "../../images/weather-icons/heavy_rain.svg";
+        weatherIcon.src = "../../images/weather-icons/rain_heavy.svg";
 
         break;
       }
@@ -134,8 +153,6 @@ window.addEventListener("keydown", (e) => {
     fetch(`https://api.tomorrow.io/v4/weather/realtime?location=${searchBar.value.toLowerCase().trim()}&apikey=hWQMlaU8KJmGFa68MS0tzp7xrbb58xX0`, options)
     .then(response => response.json())
     .then(response => {
-      console.log(response)
-
       let cityName = searchBar.value.split(' ');
 
       for(let i = 0; i < cityName.length; i++) {
@@ -206,7 +223,7 @@ window.addEventListener("keydown", (e) => {
         }
 
         case 4201: {
-          weatherIcon.src = "../../images/weather-icons/heavy_rain.svg";
+          weatherIcon.src = "../../images/weather-icons/rain_heavy.svg";
 
           break;
         }

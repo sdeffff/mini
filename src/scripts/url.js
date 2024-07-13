@@ -1,5 +1,6 @@
 const link = document.getElementById("original-link"),
-shortUrl = document.getElementById('short_url')
+shortUrl = document.getElementById('short_url'),
+qrCode = document.getElementById('qr_code');
 
 window.addEventListener("keydown", async (e) => {
     if(e.key === "Enter") {
@@ -19,6 +20,8 @@ window.addEventListener("keydown", async (e) => {
 
         shortUrl.innerHTML = shortRes;
         shortUrl.setAttribute('href', shortRes);
+
+        qrCode.innerHTML = '';
 
         let qrcode = new QRCode("qr_code", {
             text: link.value,

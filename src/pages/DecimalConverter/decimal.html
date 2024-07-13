@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/decimal.css">
+    <title>Decimal Converter</title>
+</head>
+<body>
+    <main>
+        <article>
+            <input type="text" placeholder="Write your number here..." id="num">
+
+            <select id="numberSys">
+                <option value="0">Select number system</option>
+                <option value="1">Binary</option>
+                <option value="2">Hexadecimal</option>
+                <option value="3">Octal</option>
+                <option value="4">Roman</option>
+            </select>
+
+            <h2 id="res"></h2>
+        </article>
+    </main>
+
+    <script src="../../scripts/decimal.js"></script>
+    <script src="../../scripts/main.js"></script>
+</body>
+</html>

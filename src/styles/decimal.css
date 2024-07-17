@@ -8,6 +8,8 @@ main {
     border-radius: 6px;
     
     padding: 20px;
+
+    width: 320px;
 }
 
 main article {
@@ -23,9 +25,9 @@ main article input {
     border-bottom: 1px solid #333333;
 
     padding: 10px 20px 5px 0;
-    width: 220px;
+    width: 300px;
 
-    font-size: 16px;
+    font-size: 18px;
 }
 
 main article select {
@@ -39,5 +41,6 @@ main article select {
 }
 
 main article h2 {
-    font-size: 18px;
+    font-size: 20px;
+    word-break: break-all;
 }

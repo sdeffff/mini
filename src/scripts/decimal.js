@@ -3,7 +3,7 @@ type = document.getElementById('numberSys'),
 res = document.getElementById('res');
 
 window.addEventListener('keydown', (e) => {
-    if(e.key === "Enter") {
+    if(e.key === "Enter" && num.value != false) {
         let index = type.options.selectedIndex;
 
         let numberType = type.options[index].innerText;

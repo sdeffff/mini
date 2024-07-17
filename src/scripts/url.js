@@ -1,6 +1,7 @@
 const link = document.getElementById("original-link"),
 shortUrl = document.getElementById('short_url'),
-qrCode = document.getElementById('qr_code');
+qrCode = document.getElementById('qr_code'),
+img = document.getElementById('img');
 
 window.addEventListener("keydown", async (e) => {
     if(e.key === "Enter") {
@@ -30,6 +31,16 @@ window.addEventListener("keydown", async (e) => {
             colorDark : "#000000",
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
+        });
+
+        new QRious({
+            element: qrCode,
+            value: img.src,
+            size: 220,
+            background: img.src,
+            backgroundAlpha: 1.0,
+            foreground: '#000000',
+            level: 'H'
         });
     }
 })

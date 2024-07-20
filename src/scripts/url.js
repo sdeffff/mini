@@ -4,7 +4,7 @@ qrCode = document.getElementById('qr_code'),
 img = document.getElementById('img');
 
 window.addEventListener("keydown", async (e) => {
-    if(e.key === "Enter") {
+    if(e.key === "Enter" && link.value != false) {
         const response = await fetch('https://api-ssl.bitly.com/v4/shorten', {
             method: "POST",
             headers: {
@@ -31,16 +31,6 @@ window.addEventListener("keydown", async (e) => {
             colorDark : "#000000",
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
-        });
-
-        new QRious({
-            element: qrCode,
-            value: img.src,
-            size: 220,
-            background: img.src,
-            backgroundAlpha: 1.0,
-            foreground: '#000000',
-            level: 'H'
         });
     }
 })

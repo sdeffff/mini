@@ -41,17 +41,47 @@
     font-size: 18px;
 
     padding: 10px 25px;
-    border-radius: 25px;
+    border-radius: 10px;
 
     transition: .25s ease;
 
     cursor: pointer;
+
+    position: relative;
 }
 
-.content a button:hover {
-    background: transparent;
-    color: #222f3e;
-    border: 1px solid #222f3e;
+.content a button::after,
+.content a button::before {
+    content: '';
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+
+    transition: .25s ease;
+
+    z-index: -1;
+}
+
+.content a button::after {
+    background-color: #33333370;
+}
+
+.content a button::before {
+    background-color: #33333330;
+}
+
+.content a button:hover::after {
+    transform: translateY(8px);
+}
+
+.content a button:hover::before {
+    transform: translateY(14px);
 }
 
 .content article {

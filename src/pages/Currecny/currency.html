@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/currency.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <main>
+        <article>
+            <div class="first">
+                <img src="../../images/currency-images/eur.png" alt="" id="first_curr_img">
+
+                <select id="first_currency">
+                    <option value="1">EUR</option>
+                    <option value="2">USD</option>
+                    <option value="3">JPY</option>
+                    <option value="4">CZK</option>
+                    <option value="5">BGN</option>
+                    <option value="6">PLN</option>
+                    <option value="7">TRY</option>
+                    <option value="8">CAD</option>
+                    <option value="9">CNY</option>
+                    <option value="10">INR</option>
+                </select>
+
+                <input type="number" placeholder="Type amount of money" id="amount">
+            </div>
+
+            <div class="second">
+                <img src="../../images/currency-images/usd.png" alt="" id="second_curr_img">
+
+                <select id="second_currency">
+                    <option value="1">USD</option>
+                    <option value="2">EUR</option>
+                    <option value="3">JPY</option>
+                    <option value="4">CZK</option>
+                    <option value="5">BGN</option>
+                    <option value="6">PLN</option>
+                    <option value="7">TRY</option>
+                    <option value="8">CAD</option>
+                    <option value="9">CNY</option>
+                    <option value="10">INR</option>
+                </select>
+
+                <p id="res"></p>
+            </div>
+        </article>
+
+        <button id="submitBtn">Convert</button>
+    </main>
+    
+    <script src="../../scripts/currency.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <!-- <script src="../../scripts/freecurrencyapi-js-master/index.js"></script> -->
+</body>
+</html>

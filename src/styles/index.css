@@ -6,10 +6,11 @@ body {
 
 ul {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
 
-    column-gap: 45px;
-    row-gap: 25px;
+    row-gap: 30px;
+
+    place-items: center;
 }
 
 ul li {
@@ -19,7 +20,7 @@ ul li {
     flex-direction: column;
     align-items: start;
     
-    width: 460px;
+    width: 300px;
 
     padding: 10px 10px 15px 10px;
 
@@ -66,6 +67,16 @@ ul li a p {
     border-radius: 5px;
 }
 
+.online-detector-container {
+    position: absolute;
+
+    top: 2%;
+    right: 3%;
+
+    display: flex;
+    align-items: center;
+}
+
 .online-detector {
     position: absolute;
     
@@ -78,4 +89,147 @@ ul li a p {
     border-radius: 50%;
 
     transition: .2s ease;
+}
+
+.tooltip-online {
+    position: absolute;
+    top: 5px;
+    left: -190px;
+
+    background-color: #333333;
+    border-radius: 10px 12px 12px 10px;
+    
+    color: #fff;
+
+    padding: 5px 15px; 
+
+    opacity: 0;
+
+    transition: .3s ease;
+}
+
+.tooltip-online::after {
+    content: '';
+    position: absolute;
+    bottom: 32%;
+    right: -12px;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: #333333;
+    
+    transform: translate(-50%, -29%);
+    border-radius: 0px 0px 0px 0px;
+    rotate: -45deg;
+}
+
+@media screen and (min-width: 374px) {
+    ul li {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 424px) {
+    ul li {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    ul li {
+        width: 420px;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    body {
+        padding: 70px 20px;
+    }
+
+    ul {
+        column-gap: 45px;
+        row-gap: 25px;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    ul li {
+        width: 355px;
+    }
+}
+
+@media screen and (min-width: 888px) {
+    ul li {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    ul li {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 1090px) {
+    ul li {
+        width: 465px;
+    }
+}
+
+@media screen and (min-width: 1164px) {
+    body {
+        padding: 75px 20px;
+    }
+
+    ul {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    ul li {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    ul {    
+        column-gap: 25px;
+        row-gap: 15px;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    ul li {
+        width: 380px;
+    }
+}
+
+@media screen and (min-width: 1376px) {
+    body {
+        padding: 100px 30px;
+    }
+
+    ul {
+        column-gap: 35px;
+        row-gap: 20px;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    ul li {
+        width: 430px;
+    }
+}
+
+@media screen and (min-width: 1484px) {
+    ul {
+        column-gap: 45px;
+        row-gap: 25px;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    ul li {
+        width: 460px;
+    }
 }

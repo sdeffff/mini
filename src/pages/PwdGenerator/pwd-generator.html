@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./pwd-generator.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <title>Box Shadow Generator</title>
+</head>
+<body>
+    <section>
+        <article class="pwd-head">
+            <h2>Result: </h2>
+
+            <div id="pwd-res">
+                <input type="text" disabled>
+
+                <img src="../../images/copy.png" alt="">
+            </div>
+            <div class="pwd-length">
+                <h3>Enter the length you wanna have:</h3>
+                <input type="number" min="8" max="24">
+            </div>
+        </article>
+
+        <ul class="pwd-options">
+            <h3>Select options for password</h3>
+
+            <li>
+                <input type="checkbox" id="numbers">
+
+                <p>Include numbers</p>
+            </li>
+            <li>
+                <input type="checkbox" id="uppercased">
+
+                <p>Include uppercased letters</p>
+            </li>
+            <li>
+                <input type="checkbox" id="symbols">
+
+                <p>Include symbols (!?{}[]-_=+)</p>
+            </li>
+        </ul>
+
+        <button class="generate-btn" id="generate">Generate</button>
+    </section>
+    
+    <script src="./pwd-generator.js"></script>
+    <script src="../../scripts/main.js"></script>
+</body>
+</html>

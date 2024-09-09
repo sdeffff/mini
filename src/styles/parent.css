@@ -13,11 +13,13 @@
     gap: 25px;
 
     text-align: center;
+
+    width: 370px;
 }
 
 .content h2 {
     color: #333333;
-    font-size: 30px;
+    font-size: 25px;
 
     pointer-events: none;
 }
@@ -27,6 +29,8 @@
     transition: .25s ease;
 
     pointer-events: all;
+
+    text-decoration: underline;
 }
 
 .content h2 a:hover {
@@ -84,13 +88,13 @@
     transform: translateY(14px);
 }
 
-.content article {
+.github {
     position: absolute;
     
     top: -35%;
     right: 4%;
 
-    display: flex;
+    display: none;
 }
 
 .content article div {
@@ -107,4 +111,28 @@
 
 .content article h2 {
     font-size: 22px;
+}
+
+@media screen and (min-width: 650px) {
+    .content {
+        width: 650px;
+    }
+
+    .content h2 {
+        font-size: 30px;
+    }
+
+    .content h2 a {
+        text-decoration: none;
+    }
+
+    .github {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .content {
+        width: 768px;
+    }
 }

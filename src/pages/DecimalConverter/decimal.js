@@ -1,8 +1,9 @@
 const num = document.getElementById('num'),
 type = document.getElementById('numberSys'),
-res = document.getElementById('res');
+res = document.getElementById('res'),
+generateBtn = document.querySelector(".generate-btn");
 
-window.addEventListener('keydown', (e) => {
+const convertNumber = (e, param) => {
     if(e.key === "Enter" && num.value != false) {
         let index = type.options.selectedIndex;
 
@@ -79,4 +80,10 @@ window.addEventListener('keydown', (e) => {
 
             console.log(numberType)
         } 
-})
+}
+
+
+window.addEventListener('keydown', (e) => {
+    convertNumber(e);
+});
+// generateBtn.addEventListener("click", convertNumber(e));

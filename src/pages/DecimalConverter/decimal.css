@@ -7,9 +7,9 @@ main {
     background: #fff;
     border-radius: 6px;
     
-    padding: 22px;
+    padding: 8px;
 
-    width: 380px;
+    width: 310px;
 }
 
 main article {
@@ -25,9 +25,9 @@ main article input {
     border-bottom: 1px solid #333333;
 
     padding: 10px 20px 5px 0;
-    width: 300px;
+    width: 280px;
 
-    font-size: 18px;
+    font-size: 16px;
 }
 
 main article select {
@@ -43,4 +43,31 @@ main article select {
 main article h2 {
     font-size: 20px;
     word-break: break-all;
+}
+
+@media screen and (min-width: 425px) {
+    main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        background: #fff;
+        border-radius: 6px;
+        
+        padding: 22px;
+    
+        width: 380px;
+    }
+
+    main article input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #333333;
+    
+        padding: 10px 20px 5px 0;
+        width: 300px;
+    
+        font-size: 18px;
+    }
 }

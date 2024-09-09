@@ -43,7 +43,7 @@ const freecurrencyapi = new Freecurrencyapi('fca_live_TFCe23fCqTaSYe9EbvpxdkHuSn
 
 const firstCurrencyType = document.getElementById("first_currency"),
 secondCurrencyType = document.getElementById("second_currency"),
-btn = document.getElementById("submitBtn"),
+btn = document.querySelector(".generate-btn"),
 amount = document.getElementById("amount"),
 res = document.getElementById("res"),
 firstCurrImg = document.getElementById("first_curr_img"),

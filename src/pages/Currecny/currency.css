@@ -16,56 +16,9 @@ main {
     padding: 35px 25px;
 }
 
-main button {
-    padding: 10px 25px;
-    border-radius: 10px;
-
-    background-color: #333333;
-    color: #fff;
-    font-size: 17px;
-
-    transition: .25s ease;
-    position: relative;
-
-    cursor: pointer;
-}
-
-main button::after,
-main button::before {
-    content: '';
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    border-radius: 10px;
-
-    transition: .25s ease;
-
-    z-index: -1;
-}
-
-main button::after {
-    background-color: #33333370;
-}
-
-main button::before {
-    background-color: #33333330;
-}
-
-main button:hover::after {
-    transform: translateY(8px);
-}
-
-main button:hover::before {
-    transform: translateY(14px);
-}
-
 main article {
     display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
@@ -78,7 +31,7 @@ main article {
 
 #second_currency,
 #first_currency {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .first select, 
@@ -92,16 +45,60 @@ main article {
     outline: none;
     border: none;
 
-    width: 250px;
+    width: 180px;
 
     border-bottom: 1px solid #333333;
     padding: 10px 0px 5px 0px;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 #res {
-    width: 250px;
-    font-size: 17px;
+    width: 180px;
+    font-size: 16px;
 
     color: #333333;
+}
+
+@media screen and (min-width: 375px) {
+    #second_currency,
+    #first_currency {
+        font-size: 17px;
+    }
+
+    #res {
+        font-size: 17px;
+    }
+
+    .first input,
+    .second input {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .first input,
+    .second input {
+        width: 220px;
+    }
+
+    #res {
+        width: 220px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main article {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .first input,
+    .second input {
+        width: 250px;
+    }
+
+    #res {
+        width: 250px;
+    }
 }

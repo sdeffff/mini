@@ -11,13 +11,13 @@ button {
 
 ul {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 ul li {
     position: relative;
 
-    width: 16.49vw;
+    width: 34vw;
     height: 170px;
 
     cursor: pointer;
@@ -77,4 +77,34 @@ ul li:hover::after {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and (min-width: 880px) {
+    ul {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    ul li {
+        width: 25vw;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    ul {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    ul li {
+        width: 20vw;
+    }
+}
+
+@media screen and (min-width: 1380px) {
+    ul {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    ul li {
+        width: 16.7vw;
+    }
 }

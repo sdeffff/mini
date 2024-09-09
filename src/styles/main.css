@@ -9,6 +9,10 @@
     font-family: 'Lato', sans-serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 ul {
     list-style: none;
 }
@@ -29,4 +33,53 @@ body {
 button {
     outline: none;
     border: none;
+}
+
+.generate-btn {
+    position: relative;
+
+    padding: 10px 15px;
+    margin-block: 6px;
+
+    border-radius: 6px;
+    background-color: #333333;
+    
+    color: #fff;
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+.generate-btn::after,
+.generate-btn::before {
+    content: '';
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+
+    transition: .25s ease;
+
+    z-index: -1;
+}
+
+.generate-btn::after {
+    background-color: #33333370;
+}
+
+.generate-btn::before {
+    background-color: #33333330;
+}
+
+.generate-btn:hover::after {
+    transform: translateY(8px);
+}
+
+.generate-btn:hover::before {
+    transform: translateY(14px);
 }

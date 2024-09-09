@@ -10,7 +10,7 @@ main {
     gap: 20px;
 
     background: #fff;
-    padding: 20px;
+    padding: 8px;
 
     border-radius: 6px;
 }
@@ -28,15 +28,27 @@ main h3 {
 main input {
     outline: none;
     border: none;
+    border-bottom: 1px solid #3333332a;
 
-    padding: 10px 10px 10px 0;
+    padding: 8px 10px 8px 0;
 
     font-size: 16px;
 
-    width: 315px;
+    width: 290px;
 }
 
 #short_url {
     color: black;
     text-decoration: underline;
+}
+
+@media screen and (min-width: 425px) {
+    main {
+        padding: 20px;
+    }
+    
+    main input {
+        padding: 10px 10px 10px 0;
+        width: 315px;
+    }
 }

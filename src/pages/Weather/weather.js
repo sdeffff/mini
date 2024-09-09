@@ -63,7 +63,7 @@ navigator.geolocation.getCurrentPosition((position) => {
       }
 
       case 1102: {
-        weatherIcon.src = "../../images/weather-icons/moustly_cloudy.svg";
+        weatherIcon.src = "../../images/weather-icons/mostly_cloudy.svg";
 
         break;
       }

@@ -45,3 +45,24 @@
 
    <p>Again api, but here it is used to get the information about currencies and their exchange rate.</p>
 </details>
+
+<details>
+   <summary>Seventh Project 📑</summary>
+   <h3>Random Quote Generator</h3>
+
+   <p>By clicking button you will the the quote and the man who said that quote</p>
+</details>
+
+<details>
+   <summary>Eighth Project 🔑</summary>
+   <h3>Password Generator</h3>
+
+   <p>You can create your own password with different options</p>
+</details>
+
+<details>
+   <summary>Ninth Project ⏲️</summary>
+   <h3>Timer + Stopwatch</h3>
+
+   <p>Timer and Stopwatch fully realized on javascript</p>
+</details>

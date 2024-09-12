@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./time.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+
+    <link rel="icon" href="../../images/icons/time-icon.png">
+    <title>Timer+Stopwatch</title>
+</head>
+<body>
+    <section class="timer">
+        <h1>Timer</h1>
+
+        <ul class="timer-stats">
+            <li>
+                <input type="number" class="timer-minutes" min="1" max="60">
+            </li>
+            :
+            <li>
+                <input type="number" class="timer-seconds" min="1" max="60">
+            </li>
+        </ul>
+
+        <button class="generate-btn start-timer">Start</button>
+    </section>
+
+    <section class="stopwatch">
+        <h1>Stopwatch</h1>
+
+        <ul class="stopwatch-stats">
+            <li>
+                <p class="stopwatch-minutes">00</p>
+            </li>
+            :
+            <li>
+                <p class="stopwatch-seconds">00</p>
+            </li>
+            :
+            <li>
+                <p class="stopwatch-miliseconds">00</p>
+            </li>
+        </ul>
+
+        <ul class="stopwatch-controlls">
+            <li>
+                <button class="generate-btn sw-start">Start</button>
+            </li>
+            <li>
+                <button class="generate-btn sw-split">Split</button>
+            </li>
+            <li>
+                <button class="generate-btn sw-pause">Pause</button>
+            </li>
+            <li>
+                <button class="generate-btn sw-clear">Clear</button>
+            </li>
+            <li>
+                <button class="generate-btn sw-reset">Reset</button>
+            </li>
+        </ul>
+
+        <div class="stopwatch-splits">
+            
+        </div>
+    </section>
+
+    <script src="../../scripts/main.js"></script>
+    <script src="./time.js"></script>
+</body>
+</html>

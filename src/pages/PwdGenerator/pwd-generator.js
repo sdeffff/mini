@@ -35,5 +35,9 @@ const generatePwd = () => {
 generateBtn.addEventListener("click", generatePwd);
 
 copyBtn.addEventListener("click", () => {
-    navigator.clipboard.writeText(result.value);
+    if(result.value !== '') {
+        navigator.clipboard.writeText(result.value);
+
+        alert("Password copied to clipboard!");
+    }
 })

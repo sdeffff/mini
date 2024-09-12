@@ -48,6 +48,8 @@ button {
     font-size: 17px;
 
     cursor: pointer;
+
+    z-index: 999;
 }
 
 .generate-btn::after,

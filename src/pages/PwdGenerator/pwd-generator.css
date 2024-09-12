@@ -14,7 +14,7 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 25rem;
+    width: 22rem;
 
     display: flex;
     flex-direction: column;
@@ -30,6 +30,8 @@ section {
 #pwd-res {
     display: flex;
     align-items: center;
+
+    position: relative;
 }
 
 #pwd-res input {
@@ -41,6 +43,8 @@ section {
     pointer-events: all;
     cursor: pointer;
     width: 22px;
+
+    position: relative;
 }
 
 .pwd-head {
@@ -79,4 +83,10 @@ section {
 
 .pwd-options li p {
     font-size: 1.03rem;
+}
+
+@media screen and (min-width: 412px) {
+    section {
+        width: 25rem;
+    }
 }
